@@ -3,12 +3,12 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZOne: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
 security:
   oauth2:
     client:
-      accessTokenUri: http://localhost:8899/userauth/ouath/token
-      userAuthorization: http://localhost:8899/userauth/ouath/authorize
+      accessTokenUri: http://localhost:8899/userauth/oauth/token
+      userAuthorizationUri: http://localhost:8899/userauth/oauth/authorize
       clientId: acme
       clientSecret: acmesecret
     resource:
@@ -23,10 +23,10 @@ zuul:
     user:
       path: /api/loggedinuser/**
       stripPrefix: true
-      url:  http://localhost:8899/userauth/
+      url: http://localhost:8899/userauth/
     ui:
       path: /**
-      stripPrefix: true
+      stripPrefix: false
       serviceId: web-portal
 spring:
   aop:
