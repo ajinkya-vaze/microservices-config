@@ -7,11 +7,6 @@ eureka:
       defaultZOne: http://localhost:8761/eureka/
 security:
   oauth2:
-    client:
-      accessTokenUri: http://localhost:8899/userauth/oauth/token
-      userAuthorizationUri: http://localhost:8899/userauth/oauth/authorize
-      clientId: acme
-      clientSecret: acmesecret
     resource:
       jwt:
         keyValue: |
