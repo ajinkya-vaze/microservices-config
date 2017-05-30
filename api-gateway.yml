@@ -36,6 +36,10 @@ zuul:
       path: /task-service/**
       stripPrefix: false
       serviceId: task-service
+    comments-service:
+      path: /comments-service/**
+      stripPrefix: false
+      serviceId: comments-service
 spring:
   aop:
     proxy-target-class: true
